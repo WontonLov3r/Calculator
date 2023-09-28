@@ -1,6 +1,12 @@
 let preVal = 0
 
-let operator = 
+let newVal = 0
+
+let resVal = 0
+
+operator = function () {
+    0
+}
 
 
 

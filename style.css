@@ -2,6 +2,46 @@ body {
     background-color:black;
 }
 
-calcContainer {
-    background:blue;
+.container {
+    background:black;
+    margin:0px;
+}
+
+.entry {
+    width:100px;
+    height:50px;
+    border-radius:10px;
+    margin:10px 2px;
+    font-size:10px;
+    font-weight:bold;
+}
+
+.calc-container {
+    width:305px;
+    background-color:rgb(9,114,138);
+    border-radius:20px;
+    padding:30px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.numBut {
+    height: 50px;
+    width:50px;
+    margin:10px 4px;
+    border: none !important;
+}
+
+.mathBut {
+    height:50px;
+    width:50px;
+    margin:10px 4px;
+    border: none !important;
+}
+
+.equalBut {
+    height:50px;
+    width: 126px;
+    margin:10px 4px;
+    border: none !important;
 }
