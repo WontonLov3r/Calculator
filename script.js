@@ -1,12 +1,31 @@
-let preVal = 0
+let preVal = ''
+let newVal = ''
+let resultVal = ''
+let mathOperator = ''
+//Store whether or not decimal was clicked
+//only allow one decimal per value
+let decimalClicked = false
 
-let newVal = 0
+//Hold values we want stored in memory
+let valMemStored = ''
 
-let resVal = 0
+function numButPress(num) {
 
-operator = function () {
-    0
 }
 
+function equalButPress() {
 
+}
+
+function clearButPress() {
+
+}
+
+function copyButPress() {
+
+}
+
+function pasteButPress() {
+    
+}
 
