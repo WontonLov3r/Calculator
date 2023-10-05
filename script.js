@@ -14,7 +14,7 @@ function numButPress(num) {
         //Start a new number
         newVal = num
         //reset to create a new result 
-        resultVal = ''
+        resultVal = '' 
     } else {
         //used to block multiple decimals
         if (num === '.') {
@@ -31,14 +31,61 @@ function numButPress(num) {
 
         }
 //update the display
-document.getElementById('entry').value = newVal
-console.log(newVal);    
+document.getElementById('entry').value = newVal 
     }
     
-
+function mathButPress(operator) {
+    //Check if there was a previous calculation
+    //by seeing if resultVal has a value 
+    //If result doesnt have a value then store
+    //the current val as a previous for the next calculation 
+    if(!resultVal) {
+        prevVal = newVal
+    }
+    else {
+        //if there is a current result store that as the previous value entered
+        prevVal = resultVal
+    }
+    //restart creation of new number
+    newVal = ''
+    //Store operator clicked
+    decimalClicked = false
+    mathOperator = operator
+    //Prepare entry for receiving new numbers
+    resultVal = ''
+    document.getElementById('entry').value =''
+}
 
 function equalButPress() {
+    //Reset Decimal Clicked
+    decimalClicked = false
+    //Connect string numbers to float
+    prevVal = parseFloat(prevVal)
+    newVal = parseFloat(newVal) 
 
+    //Preform calculations based on stored operator
+    switch (mathOperator) {
+        case '+':
+            resultVal = prevVal + newVal
+            break
+        case '-':
+            resultVal = prevVal - newVal
+            break
+        case '*':
+            resultVal = prevVal * newVal
+            break
+        case '/':
+            resultVal = prevVal / newVal
+            break
+
+    default:
+        resultVal = newVal
+    }
+    //Store the current value as the previous so that I can accept to the next value in the calculation
+prevVal = newVal
+document.getElementById('entry').value = resultVal
+console.log(resultVal);
+console.log("pressed");
 }
 
 //clears everything except memory 
